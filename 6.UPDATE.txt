@@ -1,0 +1,6 @@
+--REFERENCE : https://www.w3schools.com/sql/sql_update.asp
+
+--memperbaharui data employee
+UPDATE employee
+SET username = 'I GUSTI AGUNG', email= 'gusti@gmail.com'
+WHERE id_employe = 1;

@@ -1,0 +1,8 @@
+--REFERENCE : https://www.w3schools.com/sql/sql_delete.asp
+
+-- delete some records
+DELETE FROM booking WHERE id_booking='1';
+
+-- delete all records
+DELETE FROM booking
+

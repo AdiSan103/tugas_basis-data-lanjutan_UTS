@@ -1,0 +1,16 @@
+REFERENCE : https://www.w3schools.com/sql/sql_ref_between.asp
+
+SELECT * FROM booking
+WHERE book_room_start BETWEEN '2023-05-01 14:00:00' AND '2023-06-02 10:00:00';
+
+SELECT * FROM employee
+WHERE id_employee BETWEEN 1 AND 5;
+
+SELECT * FROM guest
+WHERE id_guest BETWEEN 1 AND 4;
+
+SELECT * FROM room
+WHERE id_room BETWEEN 1 AND 4;
+
+SELECT * FROM type_room
+WHERE price BETWEEN 0 AND 1800000;

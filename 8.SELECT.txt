@@ -1,0 +1,4 @@
+--REFERENCE : https://www.w3schools.com/sql/sql_ref_select.asp
+
+--get all records booking
+SELECT * FROM booking;

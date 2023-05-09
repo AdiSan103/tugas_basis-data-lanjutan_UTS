@@ -1,0 +1,5 @@
+--REFERENCE : https://www.w3schools.com/sql/sql_where.asp
+
+--get all records from booking where id_employee is 4
+SELECT * FROM booking
+WHERE id_employee='4'

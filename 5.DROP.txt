@@ -1,0 +1,8 @@
+--REFERENCE : https://www.w3schools.com/sql/sql_ref_drop.asp
+
+--hapus database :
+DROP DATABASE db_hotel
+
+--drop table room
+ALTER TABLE room
+DROP COLUMN bath;

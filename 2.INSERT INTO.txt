@@ -1,0 +1,18 @@
+INSERT INTO `type_room`(id_type_room, title, description, price)
+VALUES (01, 'Suite', 'Kamar dengan fasilitas lengkap', '2500000'),
+(02, 'Standar', 'Kamar dengan fasilitas dasar', '800000');
+
+INSERT INTO `room` (id_room, name, bath, bed, wide, ready, id_type_room)
+VALUES (01, 'Family Room 101', 'Bathub', 'Double big bed', '25M', 'Tersedia', 03),
+(02, 'Premium Room 102', 'Bathub & Shower', 'Double big bed', '30M', 'Tersedia', 10);
+
+INSERT INTO `employee` (id_employee, username, email, password, address, gender) 
+VALUES (01, 'Jhon Doe', 'jhondoe@gmail.com', 'ookj2123', 'Jl. Sudirman No. 10, Jakarta', 'Laki-Laki'),
+(02, 'Jane Smith', 'janesmith@gmail.com', 'dsagh234', 'Jl. Thamrin No. 20, Jakarta', 'Perempuan');
+
+INSERT INTO `guest` (id_guest, username, password, address, email, telepon) 
+VALUES (01,'Hika Judi','hjfg0981', 'Jl. Sudirman No. 10, Jakarta', 'hikajudi@gmail.com', '08123456789'),
+(02, 'Lisa Smith', 'ggfh1526', 'Jl. Merdeka No. 5, Bandung', 'lisasmith@gmail.com', '08765432100');
+
+INSERT INTO `booking` (id_booking, id_employee, id_guest, id_room, book_room_start, book_room_end, payment_method, price) 
+VALUES (01, 02, 06, 02, '2023-05-01 14:00:00', '2023-05-05 12:00:00',  'Cash', 'Rp. 3.700.000');

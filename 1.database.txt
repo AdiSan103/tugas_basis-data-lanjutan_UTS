@@ -1,0 +1,60 @@
+-- nama : db_hotel
+CREATE DATABASE `db_hotel`;
+
+-- memanggil db_hotel yang sudah di buat
+USE `db_hotel`;
+
+-- membuat tabel 
+CREATE TABLE `type_room`(
+	id_type_room INT NOT NULL PRIMARY KEY,
+    title VARCHAR(225) NOT NULL,
+    description VARCHAR(225) NOT NULL,
+    price VARCHAR(225) NOT NULL
+);
+
+-- membuat tabel 
+CREATE TABLE `room`(
+	id_room INT NOT NULL PRIMARY KEY,
+    name VARCHAR(255),
+    bath VARCHAR(255),
+    bed VARCHAR(255),
+    wide VARCHAR(255),
+    ready VARCHAR(255),
+    id_type_room INT NOT NULL,
+    FOREIGN  KEY (id_type_room) REFERENCES `type_room`(id_type_room)
+);
+
+-- membuat tabel 
+CREATE TABLE `employee`(
+	id_employee INT NOT NULL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    gender VARCHAR(255) NOT NULL
+);
+
+-- membuat tabel 
+CREATE TABLE `guest`(
+	id_guest INT NOT NULL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    telepon VARCHAR(255) NOT NULL
+);
+
+-- membuat tabel 
+CREATE TABLE `booking`(
+	id_booking INT NOT NULL PRIMARY KEY,
+    id_employee INT NOT NULL,
+    id_guest INT NOT NULL,
+    id_room INT NOT NULL,
+    book_room_start DATETIME,
+    book_room_end DATETIME,
+    payment_method VARCHAR(255),
+    price VARCHAR(255),
+    FOREIGN KEY (id_guest) REFERENCES `guest`(id_guest),
+    FOREIGN KEY (id_employee) REFERENCES `employee`(id_employee),
+    FOREIGN KEY (id_room) REFERENCES `room`(id_room)
+);
